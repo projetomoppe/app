@@ -19,6 +19,8 @@ import { D2Page } from '../pages/d2/d2';
 import { ConfigPage } from '../pages/config/config';
 import { SitePage } from '../pages/site/site';
 
+import { OneSignal } from '@ionic-native/onesignal';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -52,7 +54,8 @@ import { SitePage } from '../pages/site/site';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    OneSignal,
   ]
 })
 export class AppModule {}

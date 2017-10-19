@@ -38,7 +38,8 @@ export class MyApp {
 
       window["plugins"].OneSignal
       .startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")
-      .inFocusDisplaying(notificationOpenedCallback)
+      .inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification)
+      //.handleNotificationReceived(notificationOpenedCallback)
       .handleNotificationOpened(notificationOpenedCallback)
       .endInit();
     });

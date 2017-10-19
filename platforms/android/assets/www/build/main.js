@@ -36,7 +36,7 @@ var D1Page = (function () {
 }());
 D1Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-d1',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/d1/d1.html"*/'<!--\n  Generated template for the D1Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 1</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/d1"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/d1/d1.html"*/,
+        selector: 'page-d1',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/'<!--\n  Generated template for the D1Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 1</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d1"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], D1Page);
@@ -81,7 +81,7 @@ var D2Page = (function () {
 }());
 D2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-d2',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/d2/d2.html"*/'<!--\n  Generated template for the D2Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 2</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/d2"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/d2/d2.html"*/,
+        selector: 'page-d2',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d2/d2.html"*/'<!--\n  Generated template for the D2Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 2</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d2"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d2/d2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], D2Page);
@@ -126,7 +126,7 @@ var HistoricoPage = (function () {
 }());
 HistoricoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-historico',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/historico/historico.html"*/'<!--\n  Generated template for the BancoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>\n     Histórico\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content no-padding>\n    <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_dados"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/historico/historico.html"*/,
+        selector: 'page-historico',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/historico/historico.html"*/'<!--\n  Generated template for the BancoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>\n     Histórico\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content no-padding>\n    <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_historico"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/historico/historico.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], HistoricoPage);
@@ -171,7 +171,7 @@ var SitePage = (function () {
 }());
 SitePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-site',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/site/site.html"*/'<!--\n  Generated template for the SitePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Site do projeto</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content no-padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://moppe.cefor.ifes.edu.br/"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/site/site.html"*/,
+        selector: 'page-site',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/site/site.html"*/'<!--\n  Generated template for the SitePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Site do projeto</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content no-padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://moppe.cefor.ifes.edu.br/"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/site/site.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], SitePage);
@@ -269,7 +269,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Dados" tabIcon="ios-paper"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Blog" tabIcon="ios-people"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Sobre" tabIcon="ios-information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/tabs/tabs.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Dados" tabIcon="ios-paper"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Blog" tabIcon="ios-people"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Sobre" tabIcon="ios-information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/tabs/tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -304,7 +304,7 @@ var BlogPage = (function () {
 }());
 BlogPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-blog',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/blog/blog.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Blog\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://moppe.cefor.ifes.edu.br/blog/"></iframe>\n</ion-content>\n\n<!--  \n  <a class="item" href="#" onclick="window.open(\'http://moppe.cefor.ifes.edu.br\', \'_system\', \'location=yes\'); return false;">\n      site\n  </a>\n-->\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/blog/blog.html"*/
+        selector: 'page-blog',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/blog/blog.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Blog\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://moppe.cefor.ifes.edu.br/blog/"></iframe>\n</ion-content>\n\n<!--  \n  <a class="item" href="#" onclick="window.open(\'http://moppe.cefor.ifes.edu.br\', \'_system\', \'location=yes\'); return false;">\n      site\n  </a>\n-->\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/blog/blog.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], BlogPage);
@@ -342,7 +342,7 @@ var SobrePage = (function () {
 }());
 SobrePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-sobre',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/sobre/sobre.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Sobre o projeto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h5>Sobre</h5>\n  <p>\n    O projeto Moppe, é um projeto de Iniciação Científica Júnior, que tem como objetivo geral \n    construir um dispositivo com capacidade de sensoriamento e comunicação sem fio, para \n    monitoramento da bacia hidrográfica do rio Jacaraípe, presente no município de Serra-ES.\n    Atualmente, um conjunto de 16 bairros sofrem as consequências das enchentes, essas oriundas \n    pelo processo de ocupação desordenada e problemas relacionados ao assoreamento e falta de prevenção \n    da mata ciliar do rio Jacaraípe. Em cenários nos quais a população da região possa estar preditiva, \n    emitindo alerta a população e aos órgãos competentes municipais e estaduais.\n  </p>\n\n  <h5>Objetivos</h5>\n  <p> \n    Este projeto de iniciação científica júnior tem como objetivo geral construir um dispositivo\n    com capacidade de sensoriamento e comunicação sem fio para monitoramento da bacia hidrográfica de rio Jacaraípe pra predição de enchente .\n  </p>\n    \n  <p>\n    E-mail do coordenador: saymon@ifes.edu.br<br>\n  </p>\n  <button [navPush]="sitePage" ion-button block color="default">Acesse nosso site</button>\n<!--  \n  <p>\n    Acesse nosso <a href="http://moppe.cefor.ifes.edu.br">\n      site\n    </a><br>\n  <a class="item" href="#" onclick="window.open(\'http://moppe.cefor.ifes.edu.br\', \'_system\', \'location=yes\'); return false;">\n      site\n  </a>\n\n  </p>\n-->\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/sobre/sobre.html"*/
+        selector: 'page-sobre',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/sobre/sobre.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Sobre o projeto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h5>Sobre</h5>\n  <p>\n    O projeto Moppe, é um projeto de Iniciação Científica Júnior, que tem como objetivo geral \n    construir um dispositivo com capacidade de sensoriamento e comunicação sem fio, para \n    monitoramento da bacia hidrográfica do rio Jacaraípe, presente no município de Serra-ES.\n    Atualmente, um conjunto de 16 bairros sofrem as consequências das enchentes, essas oriundas \n    pelo processo de ocupação desordenada e problemas relacionados ao assoreamento e falta de prevenção \n    da mata ciliar do rio Jacaraípe. Em cenários nos quais a população da região possa estar preditiva, \n    emitindo alerta a população e aos órgãos competentes municipais e estaduais.\n  </p>\n\n  <h5>Objetivos</h5>\n  <p> \n    Este projeto de iniciação científica júnior tem como objetivo geral construir um dispositivo\n    com capacidade de sensoriamento e comunicação sem fio para monitoramento da bacia hidrográfica de rio Jacaraípe pra predição de enchente .\n  </p>\n    \n  <p>\n    E-mail do coordenador: saymon@ifes.edu.br<br>\n  </p>\n  <button [navPush]="sitePage" ion-button block color="default">Acesse nosso site</button>\n<!--  \n  <p>\n    Acesse nosso <a href="http://moppe.cefor.ifes.edu.br">\n      site\n    </a><br>\n  <a class="item" href="#" onclick="window.open(\'http://moppe.cefor.ifes.edu.br\', \'_system\', \'location=yes\'); return false;">\n      site\n  </a>\n\n  </p>\n-->\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/sobre/sobre.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], SobrePage);
@@ -389,7 +389,7 @@ var DadosPage = (function () {
 }());
 DadosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-dados',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/dados/dados.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Dados gerais\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button [navPush]="d1Page" ion-button block color="default">Dispositivo 1</button>\n  <br>\n  <button [navPush]="d2Page" ion-button block color="default">Dispositivo 2</button>\n  <br>\n  <button [navPush]="historicoPage" ion-button block color="secondary">Histórico dos dados</button>\n  <br>\n  <button [navPush]="configPage" ion-button block color="dark">Configurações</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/dados/dados.html"*/
+        selector: 'page-dados',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/dados/dados.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Dados gerais\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button [navPush]="d1Page" ion-button block color="secondary">Dispositivo 1</button>\n  <br>\n  <button [navPush]="d2Page" ion-button block color="secondary">Dispositivo 2</button>\n  <br>\n  <button [navPush]="historicoPage" ion-button block color="default">Histórico dos dados</button>\n  <br>\n  <button [navPush]="configPage" ion-button block color="dark">Configurações</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/dados/dados.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], DadosPage);
@@ -559,7 +559,7 @@ var MyApp = (function () {
             };
             window["plugins"].OneSignal
                 .startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")
-                .inFocusDisplaying(notificationOpenedCallback)
+                .inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification)
                 .handleNotificationOpened(notificationOpenedCallback)
                 .endInit();
         });
@@ -567,7 +567,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
 ], MyApp);
@@ -635,7 +635,7 @@ var ConfigPage = (function () {
 }());
 ConfigPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-config',template:/*ion-inline-start:"/home/edson/Documentos/apps/moppe-app/src/pages/config/config.html"*/'<!--\n  Generated template for the ConfigPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Configurações</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <ion-label>Notificações</ion-label>\n    <ion-toggle enabled checked="true"></ion-toggle>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/moppe-app/src/pages/config/config.html"*/,
+        selector: 'page-config',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/config/config.html"*/'<!--\n  Generated template for the ConfigPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Configurações</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <ion-label>Notificações</ion-label>\n    <ion-toggle enabled checked="true"></ion-toggle>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/config/config.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ConfigPage);

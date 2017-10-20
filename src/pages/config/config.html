@@ -14,14 +14,20 @@
 
 
 <ion-content padding>
+<!--
   <ion-item>
     <ion-label>Notificações</ion-label>
     <ion-toggle enabled checked="true"></ion-toggle>
   </ion-item>
 
-  <ion-item no-lines (click)="Update()">
-    <ion-label> Notification</ion-label>
-    <ion-toggle enabled checked={{notify}}></ion-toggle>
+  <ion-item no-lines (click)="update()">
+    <ion-label> Notificações</ion-label>
+    <ion-toggle enabled checked={notify}></ion-toggle>
+  </ion-item>
+-->
+  <ion-item>
+    <ion-label>Notificações</ion-label>
+    <ion-toggle [(ngModel)]="isToggled" (ionChange)="notify()"></ion-toggle>
   </ion-item>
 
 </ion-content>

@@ -7,6 +7,90 @@ webpackJsonp([5],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(154);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the ConfigPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ConfigPage = (function () {
+    function ConfigPage(alertController, storage) {
+        //this.notify()
+        //this.isToggled = true
+        var _this = this;
+        this.alertController = alertController;
+        this.storage = storage;
+        storage.get("Toggled").then(function (Toggled) {
+            _this.isToggled = Toggled;
+        });
+        this.alertar(this.isToggled);
+    }
+    ConfigPage.prototype.alertar = function (msg) {
+        var alert = this.alertController.create({
+            title: 'Moppe',
+            subTitle: msg,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    ConfigPage.prototype.notify = function () {
+        if (this.isToggled) {
+            window["plugins"].OneSignal.startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061");
+            window["plugins"].OneSignal.setSubscription(true);
+            window["plugins"].OneSignal.getPermissionSubscriptionState(function (status) {
+                alert(status.subscriptionStatus.subscribed);
+            });
+            window["plugins"].OneSignal.endInit();
+            //this.alertar("Notificações ativadas")
+            this.storage.set("Toggled", this.isToggled);
+        }
+        else {
+            window["plugins"].OneSignal.startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061");
+            window["plugins"].OneSignal.setSubscription(false);
+            window["plugins"].OneSignal.getPermissionSubscriptionState(function (status) {
+                alert(status.subscriptionStatus.subscribed);
+            });
+            window["plugins"].OneSignal.endInit();
+            //this.alertar("Notificações desativadas")
+            this.storage.set("Toggled", this.isToggled);
+        }
+    };
+    ConfigPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ConfigPage');
+    };
+    return ConfigPage;
+}());
+ConfigPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-config',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/config/config.html"*/'<!--\n  Generated template for the ConfigPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Configurações</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<!--\n  <ion-item>\n    <ion-label>Notificações</ion-label>\n    <ion-toggle enabled checked="true"></ion-toggle>\n  </ion-item>\n\n  <ion-item no-lines (click)="update()">\n    <ion-label> Notificações</ion-label>\n    <ion-toggle enabled checked={notify}></ion-toggle>\n  </ion-item>\n-->\n  <ion-item>\n    <ion-label>Notificações</ion-label>\n    <ion-toggle [(ngModel)]="isToggled" (ionChange)="notify()"></ion-toggle>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/config/config.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
+], ConfigPage);
+
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+
+/***/ 101:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return D1Page; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,33 +103,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the ConfigPage page.
+ * Generated class for the D1Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var ConfigPage = (function () {
-    function ConfigPage(navCtrl, navParams) {
+var D1Page = (function () {
+    function D1Page(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ConfigPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ConfigPage');
+    D1Page.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad D1Page');
     };
-    return ConfigPage;
+    return D1Page;
 }());
-ConfigPage = __decorate([
+D1Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-config',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/config/config.html"*/'<!--\n  Generated template for the ConfigPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Configurações</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <ion-label>Notificações</ion-label>\n    <ion-toggle enabled checked="true"></ion-toggle>\n  </ion-item>\n\n  <ion-item no-lines (click)="Update()">\n    <ion-label> Notification</ion-label>\n    <ion-toggle enabled checked={{notify}}></ion-toggle>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/config/config.html"*/,
+        selector: 'page-d1',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/'<!--\n  Generated template for the D1Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 1</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d1"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], ConfigPage);
+], D1Page);
 
-//# sourceMappingURL=config.js.map
+//# sourceMappingURL=d1.js.map
 
 /***/ }),
 
-/***/ 101:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90,7 +174,7 @@ D2Page = __decorate([
 
 /***/ }),
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -135,7 +219,7 @@ HistoricoPage = __decorate([
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -202,23 +286,23 @@ webpackEmptyAsyncContext.id = 112;
 
 var map = {
 	"../pages/config/config.module": [
-		271,
+		274,
 		4
 	],
 	"../pages/d1/d1.module": [
-		270,
+		275,
 		3
 	],
 	"../pages/d2/d2.module": [
-		272,
+		276,
 		2
 	],
 	"../pages/historico/historico.module": [
-		273,
+		277,
 		1
 	],
 	"../pages/site/site.module": [
-		274,
+		278,
 		0
 	]
 };
@@ -238,15 +322,15 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__blog_blog__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sobre_sobre__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dados_dados__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__blog_blog__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sobre_sobre__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dados_dados__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -278,7 +362,7 @@ TabsPage = __decorate([
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -313,14 +397,14 @@ BlogPage = __decorate([
 
 /***/ }),
 
-/***/ 199:
+/***/ 200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SobrePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_site__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_site__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -351,16 +435,16 @@ SobrePage = __decorate([
 
 /***/ }),
 
-/***/ 200:
+/***/ 201:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DadosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__historico_historico__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__d1_d1__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__d2_d2__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__historico_historico__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__d1_d1__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__d2_d2__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -398,13 +482,13 @@ DadosPage = __decorate([
 
 /***/ }),
 
-/***/ 201:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -412,7 +496,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -420,19 +504,19 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_blog_blog__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_dados_dados__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_sobre_sobre__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_historico_historico__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_d1_d1__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_d2_d2__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_config_config__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_site_site__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_onesignal__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_historico_historico__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_d1_d1__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_d2_d2__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_config_config__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_site_site__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_blog_blog__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_dados_dados__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_sobre_sobre__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -455,6 +539,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+//import { OneSignal } from '@ionic-native/onesignal';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -464,46 +549,49 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_blog_blog__["a" /* BlogPage */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_dados_dados__["a" /* DadosPage */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_sobre_sobre__["a" /* SobrePage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_blog_blog__["a" /* BlogPage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_dados_dados__["a" /* DadosPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_sobre_sobre__["a" /* SobrePage */],
             __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_historico_historico__["a" /* HistoricoPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_d1_d1__["a" /* D1Page */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_d2_d2__["a" /* D2Page */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_config_config__["a" /* ConfigPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_site_site__["a" /* SitePage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_historico_historico__["a" /* HistoricoPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_d1_d1__["a" /* D1Page */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_d2_d2__["a" /* D2Page */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_config_config__["a" /* ConfigPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_site_site__["a" /* SitePage */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/d1/d1.module#D1PageModule', name: 'D1Page', segment: 'd1', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/config/config.module#ConfigPageModule', name: 'ConfigPage', segment: 'config', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/d1/d1.module#D1PageModule', name: 'D1Page', segment: 'd1', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/d2/d2.module#D2PageModule', name: 'D2Page', segment: 'd2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/historico/historico.module#HistoricoPageModule', name: 'HistoricoPage', segment: 'historico', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/site/site.module#SitePageModule', name: 'SitePage', segment: 'site', priority: 'low', defaultHistory: [] }
                 ]
+            }),
+            __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot({
+                name: '__mydb',
+                driverOrder: ['indexeddb', 'sqlite', 'websql']
             })
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_blog_blog__["a" /* BlogPage */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_dados_dados__["a" /* DadosPage */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_sobre_sobre__["a" /* SobrePage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_blog_blog__["a" /* BlogPage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_dados_dados__["a" /* DadosPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_sobre_sobre__["a" /* SobrePage */],
             __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_historico_historico__["a" /* HistoricoPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_d1_d1__["a" /* D1Page */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_d2_d2__["a" /* D2Page */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_config_config__["a" /* ConfigPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_site_site__["a" /* SitePage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_historico_historico__["a" /* HistoricoPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_d1_d1__["a" /* D1Page */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_d2_d2__["a" /* D2Page */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_config_config__["a" /* ConfigPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_site_site__["a" /* SitePage */],
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_15__ionic_native_onesignal__["a" /* OneSignal */],
         ]
     })
 ], AppModule);
@@ -512,16 +600,16 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 261:
+/***/ 265:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -535,12 +623,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 //import { OneSignal } from '@ionic-native/onesignal';
 
-
 var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen, alertCtrl) {
-        this.alertCtrl = alertCtrl;
+    function MyApp(platform, statusBar, splashScreen, alertController) {
+        this.alertController = alertController;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
@@ -553,12 +641,7 @@ var MyApp = (function () {
             var notificationOpenedCallback = function (jsonData) {
                 //console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
                 //alert(jsonData.notification.payload.body);
-                var alert = alertCtrl.create({
-                    title: 'Moppe',
-                    subTitle: jsonData.notification.payload.body,
-                    buttons: ['OK']
-                });
-                alert.present();
+                this.alertar(jsonData.notification.payload.body);
             };
             window["plugins"].OneSignal
                 .startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")
@@ -567,6 +650,14 @@ var MyApp = (function () {
                 .endInit();
         });
     }
+    MyApp.prototype.alertar = function (msg) {
+        var alert = this.alertController.create({
+            title: 'Moppe',
+            subTitle: msg,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
     return MyApp;
 }());
 MyApp = __decorate([
@@ -575,77 +666,9 @@ MyApp = __decorate([
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
 ], MyApp);
 
-/*
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
-
-      // OneSignal Code start:
-      // Enable to debug issues:
-      // window["plugins"].OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-
-      var notificationOpenedCallback = function(jsonData) {
-        console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-      };
-
-      window["plugins"].OneSignal
-        .startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")
-        .handleNotificationOpened(notificationOpenedCallback)
-        .endInit();
-    });
-  }
-*/ 
 //# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return D1Page; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the D1Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var D1Page = (function () {
-    function D1Page(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    D1Page.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad D1Page');
-    };
-    return D1Page;
-}());
-D1Page = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-d1',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/'<!--\n  Generated template for the D1Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 1</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d1"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], D1Page);
-
-//# sourceMappingURL=d1.js.map
 
 /***/ })
 
-},[201]);
+},[202]);
 //# sourceMappingURL=main.js.map

@@ -33,10 +33,15 @@ var ConfigPage = (function () {
         var _this = this;
         this.alertController = alertController;
         this.storage = storage;
-        storage.get("Toggled").then(function (Toggled) {
-            _this.isToggled = Toggled;
+        storage.get("Toggled").then(function (toggled) {
+            if (toggled != null) {
+                _this.isToggled = toggled;
+            }
+            else {
+                _this.isToggled = true;
+            }
         });
-        this.alertar(this.isToggled);
+        //this.alertar(this.isToggled);
     }
     ConfigPage.prototype.alertar = function (msg) {
         var alert = this.alertController.create({
@@ -51,20 +56,20 @@ var ConfigPage = (function () {
             window["plugins"].OneSignal.startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061");
             window["plugins"].OneSignal.setSubscription(true);
             window["plugins"].OneSignal.getPermissionSubscriptionState(function (status) {
-                alert(status.subscriptionStatus.subscribed);
+                //alert(status.subscriptionStatus.subscribed);
             });
             window["plugins"].OneSignal.endInit();
-            //this.alertar("Notificações ativadas")
+            this.alertar("Notificações ativadas");
             this.storage.set("Toggled", this.isToggled);
         }
         else {
             window["plugins"].OneSignal.startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061");
             window["plugins"].OneSignal.setSubscription(false);
             window["plugins"].OneSignal.getPermissionSubscriptionState(function (status) {
-                alert(status.subscriptionStatus.subscribed);
+                //alert(status.subscriptionStatus.subscribed);
             });
             window["plugins"].OneSignal.endInit();
-            //this.alertar("Notificações desativadas")
+            this.alertar("Notificações desativadas");
             this.storage.set("Toggled", this.isToggled);
         }
     };
@@ -641,7 +646,13 @@ var MyApp = (function () {
             var notificationOpenedCallback = function (jsonData) {
                 //console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
                 //alert(jsonData.notification.payload.body);
-                this.alertar(jsonData.notification.payload.body);
+                //this.alertar(jsonData.notification.payload.body)
+                var alert = this.alertController.create({
+                    title: 'Moppe',
+                    subTitle: jsonData.notification.payload.body,
+                    buttons: ['OK']
+                });
+                alert.present();
             };
             window["plugins"].OneSignal
                 .startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")

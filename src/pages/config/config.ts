@@ -23,10 +23,15 @@ export class ConfigPage {
     //this.notify()
     //this.isToggled = true
     
-    storage.get("Toggled").then((Toggled) => {
-      this.isToggled = Toggled      
+    storage.get("Toggled").then((toggled) => {
+      if (toggled != null) {
+        this.isToggled = toggled   
+      }
+      else {
+        this.isToggled = true
+      }   
     });
-    this.alertar(this.isToggled);
+    //this.alertar(this.isToggled);
     
   }
 
@@ -44,20 +49,20 @@ export class ConfigPage {
       window["plugins"].OneSignal.startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")
       window["plugins"].OneSignal.setSubscription(true);
       window["plugins"].OneSignal.getPermissionSubscriptionState(function(status) {
-        alert(status.subscriptionStatus.subscribed);
+        //alert(status.subscriptionStatus.subscribed);
       });
       window["plugins"].OneSignal.endInit(); 
-      //this.alertar("Notificações ativadas")
+      this.alertar("Notificações ativadas")
       this.storage.set("Toggled",this.isToggled)
     } 
     else {
       window["plugins"].OneSignal.startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")
       window["plugins"].OneSignal.setSubscription(false);
       window["plugins"].OneSignal.getPermissionSubscriptionState(function(status) {
-        alert(status.subscriptionStatus.subscribed);
+        //alert(status.subscriptionStatus.subscribed);
       });
       window["plugins"].OneSignal.endInit();
-      //this.alertar("Notificações desativadas")
+      this.alertar("Notificações desativadas")
       this.storage.set("Toggled",this.isToggled)
     }
   }

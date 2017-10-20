@@ -28,8 +28,14 @@ export class MyApp {
       var notificationOpenedCallback = function(jsonData) {
         //console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
         //alert(jsonData.notification.payload.body);
-        this.alertar(jsonData.notification.payload.body)
-      };
+        //this.alertar(jsonData.notification.payload.body)
+        const alert = this.alertController.create({
+          title: 'Moppe',
+          subTitle: jsonData.notification.payload.body,
+          buttons: ['OK']
+        });
+        alert.present();
+      }
 
       window["plugins"].OneSignal
       .startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")

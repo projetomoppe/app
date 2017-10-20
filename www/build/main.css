@@ -25531,7 +25531,7 @@ page-d1 .webPage {
   width: 100%;
   height: 100%;
   border: 2px solid #EAAB00;
-  padding: 0px;
+  padding: 1rem;
 }
 
 page-d2 ion-content div.scroll {
@@ -25542,7 +25542,7 @@ page-d2 .webPage {
   width: 100%;
   height: 100%;
   border: 2px solid #EAAB00;
-  padding: 0px;
+  padding: 1rem;
 }
 
 page-historico ion-content div.scroll {

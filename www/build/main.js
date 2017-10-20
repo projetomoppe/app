@@ -125,7 +125,7 @@ var D1Page = (function () {
 }());
 D1Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-d1',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/'<!--\n  Generated template for the D1Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 1</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d1"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/,
+        selector: 'page-d1',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/'<!--\n  Generated template for the D1Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 1</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content no-padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d1"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d1/d1.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], D1Page);
@@ -170,7 +170,7 @@ var D2Page = (function () {
 }());
 D2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-d2',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d2/d2.html"*/'<!--\n  Generated template for the D2Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 2</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d2"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d2/d2.html"*/,
+        selector: 'page-d2',template:/*ion-inline-start:"/home/edson/Documentos/apps/app/src/pages/d2/d2.html"*/'<!--\n  Generated template for the D2Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Dispositivo 2</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content no-padding>\n  <iframe class= \'webPage\' name= "eventsPage" src="http://edsonboldrini.000webhostapp.com/moppe-ws/public/get_d2"></iframe>\n</ion-content>\n'/*ion-inline-end:"/home/edson/Documentos/apps/app/src/pages/d2/d2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], D2Page);

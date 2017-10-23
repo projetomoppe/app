@@ -25,18 +25,6 @@ export class MyApp {
       // Enable to debug issues:
       // window["plugins"].OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
-      var notificationOpenedCallback = function(jsonData) {
-        //console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-        //alert(jsonData.notification.payload.body);
-        //this.alertar(jsonData.notification.payload.body)
-        const alert = this.alertController.create({
-          title: 'Moppe',
-          subTitle: jsonData.notification.payload.body,
-          buttons: ['OK']
-        });
-        alert.present();
-      }
-
       window["plugins"].OneSignal
       .startInit("42023282-35cc-4192-a4aa-5956dd9e3602", "629827327061")
       .inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification)
@@ -44,14 +32,30 @@ export class MyApp {
       .handleNotificationOpened(notificationOpenedCallback)
       .endInit();
     });
-  }
 
-  public alertar(msg){
-    const alert = this.alertController.create({
-      title: 'Moppe',
-      subTitle: msg,
-      buttons: ['OK']
-    });
-    alert.present();
+    var notificationOpenedCallback = function(jsonData) {
+      //console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+      //alert(jsonData.notification.payload.body);
+      //this.alertar(jsonData.notification.payload.body)
+      /*
+      const alert = alertController.create({
+        title: 'Moppe',
+        subTitle: jsonData.notification.payload.body,
+        buttons: ['OK']
+      });
+      alert.present();
+      */
+      alertar(jsonData.notification.payload.body)
+    }
+
+    var alertar = function(msg){
+      const alert = alertController.create({
+        title: 'Moppe',
+        subTitle: msg,
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+    
   }
 }

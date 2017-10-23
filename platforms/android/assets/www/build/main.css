@@ -25519,8 +25519,8 @@ page-blog ion-content div.scroll {
 page-blog .webPage {
   width: 100%;
   height: 100%;
-  border: 2px solid #EAAB00;
-  padding: 1rem;
+  border: 0px solid #EAAB00;
+  padding: 0rem;
 }
 
 page-d1 ion-content div.scroll {
@@ -25530,8 +25530,8 @@ page-d1 ion-content div.scroll {
 page-d1 .webPage {
   width: 100%;
   height: 100%;
-  border: 2px solid #EAAB00;
-  padding: 1px;
+  border: 0px solid #EAAB00;
+  padding: 0rem;
 }
 
 page-d2 ion-content div.scroll {
@@ -25541,8 +25541,8 @@ page-d2 ion-content div.scroll {
 page-d2 .webPage {
   width: 100%;
   height: 100%;
-  border: 2px solid #EAAB00;
-  padding: 1px;
+  border: 0px solid #EAAB00;
+  padding: 0rem;
 }
 
 page-historico ion-content div.scroll {
@@ -25552,8 +25552,8 @@ page-historico ion-content div.scroll {
 page-historico .webPage {
   width: 100%;
   height: 100%;
-  border: 2px solid #EAAB00;
-  padding: 1rem;
+  border: 0px solid #EAAB00;
+  padding: 0rem;
 }
 
 page-site ion-content div.scroll {
@@ -25563,6 +25563,6 @@ page-site ion-content div.scroll {
 page-site .webPage {
   width: 100%;
   height: 100%;
-  border: 2px solid #EAAB00;
-  padding: 1rem;
+  border: 0px solid #EAAB00;
+  padding: 0rem;
 }

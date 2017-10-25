@@ -6,19 +6,22 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { IonicStorageModule } from '@ionic/storage';
-//import { Storage } from '@ionic/storage';
-
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { HistoricoPage } from '../pages/historico/historico';
 import { D1Page } from '../pages/d1/d1';
 import { D2Page } from '../pages/d2/d2';
-import { ConfigPage } from '../pages/config/config';
+import { OpcoesPage } from '../pages/opcoes/opcoes';
 import { SitePage } from '../pages/site/site';
 import { BlogPage} from '../pages/blog/blog';
 import { DadosPage} from '../pages/dados/dados';
 import { SobrePage} from '../pages/sobre/sobre';
+import { EstadoPage } from '../pages/estado/estado';
+
+import { IonicStorageModule } from '@ionic/storage';
+//import { Storage } from '@ionic/storage';
+
+import { SuperTabsModule } from 'ionic2-super-tabs';
 
 //import { OneSignal } from '@ionic-native/onesignal';
 
@@ -32,12 +35,14 @@ import { SobrePage} from '../pages/sobre/sobre';
     HistoricoPage,
     D1Page,
     D2Page,
-    ConfigPage,
+    OpcoesPage,
     SitePage,
+    EstadoPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    SuperTabsModule.forRoot(),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'top'}),
     IonicStorageModule.forRoot({
       name: '__mydb',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
@@ -53,8 +58,9 @@ import { SobrePage} from '../pages/sobre/sobre';
     HistoricoPage,
     D1Page,
     D2Page,
-    ConfigPage,
+    OpcoesPage,
     SitePage,
+    EstadoPage,
   ],
   providers: [
     StatusBar,

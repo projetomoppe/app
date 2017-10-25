@@ -1,17 +1,18 @@
-<ion-header>
+<!--
+  <ion-header>
   <ion-navbar>
-    <ion-title>
-      Dados gerais
-    </ion-title>
+    <ion-title align="center">Dados gerais</ion-title>
   </ion-navbar>
 </ion-header>
-
+-->
 <ion-content padding>
   <button [navPush]="d1Page" ion-button block color="secondary">Dispositivo 1</button>
   <br>
   <button [navPush]="d2Page" ion-button block color="secondary">Dispositivo 2</button>
   <br>
-  <button [navPush]="historicoPage" ion-button block color="default">Histórico dos dados</button>
+  <button [navPush]="estadoPage" ion-button block color="default">Estado geral do rio</button>
+  <br>
+  <button [navPush]="historicoPage" ion-button block color="dark">Histórico dos dados</button>
   <br>
   <!--<button [navPush]="configPage" ion-button block color="dark">Configurações</button>-->
 

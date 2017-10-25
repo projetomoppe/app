@@ -1,6 +1,29 @@
-<ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Dados" tabIcon="ios-paper"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Configurações" tabIcon="ios-hammer"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Blog" tabIcon="ios-people"></ion-tab>
-  <ion-tab [root]="tab4Root" tabTitle="Sobre" tabIcon="ios-information-circle"></ion-tab>
-</ion-tabs>
+<!--
+<ion-header>
+    <ion-navbar primary>
+        <ion-title align="center">Moppe</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-tabs  tabbarPlacement="top"  primary>
+        <ion-tab [root]="tab1Root" title="Dados" icon="ios-paper"></ion-tab>
+        <ion-tab [root]="tab2Root" title="Config." icon="ios-hammer"></ion-tab>
+        <ion-tab [root]="tab3Root" title="Blog" icon="ios-people"></ion-tab>
+        <ion-tab [root]="tab4Root" title="Sobre" icon="ios-information-circle"></ion-tab>
+    </ion-tabs>
+</ion-content>
+-->
+<ion-header>
+    <ion-navbar primary>
+        <ion-title align="center">Moppe</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <super-tabs root = "tab1Root" tabsPlacement = "top">
+        <super-tab [root]="tab1Root" title="Dados" icon="ios-paper"></super-tab>
+        <super-tab [root]="tab2Root" title="Opções" icon="ios-hammer"></super-tab>
+        <super-tab [root]="tab3Root" title="Blog" icon="ios-people"></super-tab>
+        <super-tab [root]="tab4Root" title="Sobre" icon="ios-information-circle"></super-tab>
+    </super-tabs>
+</ion-content>

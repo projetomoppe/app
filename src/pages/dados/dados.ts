@@ -5,6 +5,7 @@ import { HistoricoPage } from '../historico/historico';
 import { D1Page } from '../d1/d1';
 import { D2Page } from '../d2/d2';
 //import { ConfigPage } from '../config/config';
+import { EstadoPage } from '../estado/estado'
 
 
 @Component({
@@ -16,6 +17,7 @@ export class DadosPage {
   d1Page = D1Page;
   d2Page = D2Page;
   //configPage = ConfigPage;
+  estadoPage = EstadoPage;
 
   constructor(public navCtrl: NavController) {
 
